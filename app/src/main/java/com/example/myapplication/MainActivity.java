@@ -8,6 +8,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+
+import android.widget.Button;
+import android.widget.TextView;
+import android.view.View;
+import android.content.Intent;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,10 +21,31 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+
+       //第一个按钮：提示，其java逻辑实现
+        Button buttonShowMessage = findViewById(R.id.btnOne);
+        final TextView textViewMessage = findViewById(R.id.txtTwo);
+        buttonShowMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textViewMessage.setVisibility(View.VISIBLE);
+            }
+
+        /*ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+            return insets;*/
+        });
+
+        //第二个按钮：点击跳转下一个界面，其java逻辑实现
+        Button buttonNavigate = findViewById(R.id.btnTwo);
+        buttonNavigate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 创建 Intent 以启动 SecondActivity
+                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                startActivity(intent);
+            }
         });
     }
 }

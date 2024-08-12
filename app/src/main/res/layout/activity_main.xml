@@ -3,14 +3,63 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"><!--垂直展开-->>
 
     <TextView
+        android:id="@+id/txtOne"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:gravity="center"
+        android:text="Android 实验室第一次作业"
+        android:textSize="33sp"
+        />
+
+    <Button
+        android:id="@+id/btnOne"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="提示"
+        android:textSize="30sp"
+         />
+
+    <!--用一个空TextView让两个按钮隔开距离-->
+    <TextView
+        android:id="@+id/txtEmp01"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        />
+
+    <Button
+        android:id="@+id/btnTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Android 实验室"
-       />
+        android:layout_gravity="center"
+        android:text="进入第二次考核"
+        android:textSize="30sp" />
+
+    <!--用一个空TextView隔开距离-->
+    <TextView
+        android:id="@+id/txtEmp02"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"/>
+
+    <!--点击提示按钮出现的显示内容-->
+    <TextView
+        android:id="@+id/txtTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="我的第一个app"
+        android:textSize="22sp"
+        android:background="#F9F9F9"
+        android:visibility="gone"
+
+        />
+
 
 </LinearLayout>
