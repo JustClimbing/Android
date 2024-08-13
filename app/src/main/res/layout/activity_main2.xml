@@ -5,11 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".MainActivity2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="150dp"
+        android:layout_height="120dp"
         android:gravity="center"
         android:text="姓名："
         android:textSize="35dp"/>
@@ -22,6 +26,108 @@
         android:selectAllOnFocus="true"
         android:singleLine="true"
         />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:gravity="center"
+            android:text="性别："
+            android:textSize="35dp"/>
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+
+            <RadioButton
+                android:id="@+id/btnMan"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="男"
+                android:textSize="35dp"
+                />
+            <RadioButton
+                android:id="@+id/btnWoman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="女"
+                android:textSize="35dp" />
+        </RadioGroup>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:text="兴趣爱好"
+            android:textSize="35dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center">
+
+        <CheckBox
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:text="音乐"
+            android:textSize="35dp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="运动"
+            android:textSize="35dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:gravity="center">
+
+        <CheckBox
+            android:layout_width="141dp"
+            android:layout_height="wrap_content"
+            android:text="游泳"
+            android:textSize="35dp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="阅读"
+            android:textSize="35dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="141dp"
+            android:layout_height="wrap_content"
+            android:text="提交"
+            android:textSize="35dp" />
+
+        <Button
+            android:layout_width="141dp"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:textSize="35dp" />
+    </LinearLayout>
+
+
+
 
 
 </LinearLayout>
