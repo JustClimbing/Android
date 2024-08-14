@@ -43,8 +43,6 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:gravity="center_vertical">
-
-
             <RadioButton
                 android:id="@+id/btnMan"
                 android:layout_width="120dp"
@@ -59,8 +57,8 @@
                 android:text="女"
                 android:textSize="35dp" />
         </RadioGroup>
-
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp">
@@ -78,12 +76,14 @@
         android:gravity="center">
 
         <CheckBox
+            android:id="@+id/cb_music"
             android:layout_width="138dp"
             android:layout_height="wrap_content"
             android:text="音乐"
             android:textSize="35dp" />
 
         <CheckBox
+            android:id="@+id/cb_sport"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="运动"
@@ -96,12 +96,14 @@
         android:gravity="center">
 
         <CheckBox
+            android:id="@+id/cb_swim"
             android:layout_width="141dp"
             android:layout_height="wrap_content"
             android:text="游泳"
             android:textSize="35dp" />
 
         <CheckBox
+            android:id="@+id/cb_read"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="阅读"
@@ -114,12 +116,14 @@
         android:gravity="center">
 
         <Button
+            android:id="@+id/btn_submit"
             android:layout_width="141dp"
             android:layout_height="wrap_content"
             android:text="提交"
             android:textSize="35dp" />
 
         <Button
+            android:id="@+id/btn_cancel"
             android:layout_width="141dp"
             android:layout_height="wrap_content"
             android:text="取消"
