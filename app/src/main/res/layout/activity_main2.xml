@@ -77,14 +77,14 @@
         android:gravity="center">
 
         <CheckBox
-            android:id="@+id/cb_music"
+            android:id="@+id/cbMusic"
             android:layout_width="138dp"
             android:layout_height="wrap_content"
             android:text="音乐"
             android:textSize="35dp" />
 
         <CheckBox
-            android:id="@+id/cb_sport"
+            android:id="@+id/cbSport"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="运动"
@@ -97,14 +97,14 @@
         android:gravity="center">
 
         <CheckBox
-            android:id="@+id/cb_swim"
+            android:id="@+id/cbSwim"
             android:layout_width="141dp"
             android:layout_height="wrap_content"
             android:text="游泳"
             android:textSize="35dp" />
 
         <CheckBox
-            android:id="@+id/cb_read"
+            android:id="@+id/cbRead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="阅读"
@@ -117,14 +117,14 @@
         android:gravity="center">
 
         <Button
-            android:id="@+id/btn_submit"
+            android:id="@+id/btnSubmit"
             android:layout_width="141dp"
             android:layout_height="wrap_content"
             android:text="提交"
             android:textSize="35dp" />
 
         <Button
-            android:id="@+id/btn_cancel"
+            android:id="@+id/btnCancel"
             android:layout_width="141dp"
             android:layout_height="wrap_content"
             android:text="取消"

@@ -56,48 +56,46 @@ public class MainActivity2 extends AppCompatActivity {
             return insets;*/
 
         //获取四个CheckBox控件，通过其ID引用它
-        CheckBox cbmusic = findViewById(R.id.cb_music);
-        CheckBox cbsport = findViewById(R.id.cb_swim);
-        CheckBox cbSwim = findViewById(R.id.cb_swim);
-        CheckBox cbRead = findViewById(R.id.cb_read);
+        CheckBox cbMusic = findViewById(R.id.cbMusic);
+        CheckBox cbSport = findViewById(R.id.cbSport);
+        CheckBox cbSwim = findViewById(R.id.cbSwim);
+        CheckBox cbRead = findViewById(R.id.cbRead);
 
 
         //获取提交的Button控件，通过其ID引用它
-        Button btnSubmit=findViewById(R.id.btn_submit);
+        Button btnSubmit=findViewById(R.id.btnSubmit);
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(rbMan.isChecked()){
                     selectedOption1="男";//更新性别按钮显示为男
                 }
-
                 if(rbWoman.isChecked()){
                     selectedOption1="女";//更新性别按钮显示为女
                 }
-
-                if (cbSwim.isChecked()) {
-                    Option3="游泳";//更新点击游泳选项显示内容
-                    //Toast.makeText(MainActivity2.this, "游泳已选择", Toast.LENGTH_SHORT).show();//测试
-                }
-                if (cbmusic.isChecked()) {
+                if (cbMusic.isChecked()) {
                     Option1="音乐";//Option3="游泳";//更新点击游泳选项显示内容
                     //Toast.makeText(MainActivity2.this, "音乐已选择", Toast.LENGTH_SHORT).show();//测试
                 }
-                if (cbsport.isChecked()) {
+                if (cbSport.isChecked()) {
                     Option2="运动";//更新点击运动选项显示内容
                     //Toast.makeText(MainActivity2.this, "运动已选择", Toast.LENGTH_SHORT).show();//测试
+                }
+                if (cbSwim.isChecked()) {
+                    Option3="游泳";//更新点击游泳选项显示内容
+                    //Toast.makeText(MainActivity2.this, "游泳已选择", Toast.LENGTH_SHORT).show();//测试
                 }
                 if (cbRead.isChecked()) {
                     Option4="阅读";//更新点击阅读选项显示内容
                     //Toast.makeText(MainActivity2.this, "阅读已选择", Toast.LENGTH_SHORT).show();//测试
                 }
                 //弹出实验室考核作业要求的Toast
-                Toast.makeText(getApplicationContext(), "你好," + etName.getText() + "\n你的性别是："+selectedOption1+"\n你的个人爱好有："+Option1+","+Option2+","+Option3+","+Option4+"!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "你好，" + etName.getText() + "\n你的性别是："+selectedOption1+"\n你的个人爱好有："+Option1+","+Option2+","+Option3+","+Option4+"!", Toast.LENGTH_LONG).show();
             }
         });
 
         //获取取消Button控件，通过其ID引用它
-        Button btnCancel=findViewById(R.id.btn_cancel);
+        Button btnCancel=findViewById(R.id.btnCancel);
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
