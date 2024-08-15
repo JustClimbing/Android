@@ -1,14 +1,10 @@
 package com.example.myapplication;
-
 import android.os.Bundle;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
-
 import android.widget.Button;
 import android.widget.TextView;
 import android.view.View;
@@ -30,11 +26,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 textViewMessage.setVisibility(View.VISIBLE);
             }
-
-        /*ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;*/
         });
 
         //第二个按钮：点击跳转下一个界面，其java逻辑实现
