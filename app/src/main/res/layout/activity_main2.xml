@@ -15,14 +15,14 @@
         android:layout_width="wrap_content"
         android:layout_height="120dp"
         android:gravity="center"
-        android:text="姓名："
-        android:textSize="35dp"/>
+        android:text="@string/txtName"
+        android:textSize="35sp"/>
     <EditText
         android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:hint="姓名"
-        android:textSize="35dp"
+        android:hint="@string/etName"
+        android:textSize="35sp"
         android:textColorHint="#95A1AA"
         android:selectAllOnFocus="true"
         android:singleLine="true"
@@ -36,8 +36,8 @@
             android:layout_width="wrap_content"
             android:layout_height="120dp"
             android:gravity="center"
-            android:text="性别："
-            android:textSize="35dp"/>
+            android:text="@string/txtSex"
+            android:textSize="35sp"/>
         <RadioGroup
             android:id="@+id/radioGroup"
             android:layout_width="match_parent"
@@ -48,15 +48,15 @@
                 android:id="@+id/btnMan"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:text="男"
-                android:textSize="35dp"
+                android:text="@string/btnMan"
+                android:textSize="35sp"
                 />
             <RadioButton
                 android:id="@+id/btnWoman"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="女"
-                android:textSize="35dp" />
+                android:text="@string/btnWoman"
+                android:textSize="35sp" />
         </RadioGroup>
     </LinearLayout>
 
@@ -67,8 +67,8 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:gravity="center"
-            android:text="兴趣爱好"
-            android:textSize="35dp"/>
+            android:text="@string/txtLike"
+            android:textSize="35sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -80,15 +80,15 @@
             android:id="@+id/cbMusic"
             android:layout_width="138dp"
             android:layout_height="wrap_content"
-            android:text="音乐"
-            android:textSize="35dp" />
+            android:text="@string/cbMusic"
+            android:textSize="35sp" />
 
         <CheckBox
             android:id="@+id/cbSport"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="运动"
-            android:textSize="35dp" />
+            android:text="@string/cbSport"
+            android:textSize="35sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -100,15 +100,15 @@
             android:id="@+id/cbSwim"
             android:layout_width="141dp"
             android:layout_height="wrap_content"
-            android:text="游泳"
-            android:textSize="35dp" />
+            android:text="@string/cbSwim"
+            android:textSize="35sp" />
 
         <CheckBox
             android:id="@+id/cbRead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="阅读"
-            android:textSize="35dp" />
+            android:text="@string/cbRead"
+            android:textSize="35sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -120,15 +120,15 @@
             android:id="@+id/btnSubmit"
             android:layout_width="141dp"
             android:layout_height="wrap_content"
-            android:text="提交"
-            android:textSize="35dp" />
+            android:text="@string/btnSubmit"
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/btnCancel"
             android:layout_width="141dp"
             android:layout_height="wrap_content"
-            android:text="取消"
-            android:textSize="35dp" />
+            android:text="@string/btnCancel"
+            android:textSize="35sp" />
     </LinearLayout>
 
 

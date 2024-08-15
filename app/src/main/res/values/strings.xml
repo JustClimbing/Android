@@ -1,3 +1,23 @@
 <resources>
+    <!--第一个活动布局-->
     <string name="app_name">My Application</string>
+    <string name="txtOne">Android 实验室第一次作业</string>
+    <string name="btnOne">提示</string>
+    <string name="btnTwo">进入第二次考核</string>
+    <string name="txtTwo">我的第一个app</string>
+
+    <!--第二个活动布局-->
+    <string name="txtName">姓名：</string>
+    <string name="etName">姓名</string>
+    <string name="txtSex">性别：</string>
+    <string name="btnMan">男</string>
+    <string name="btnWoman">女</string>
+    <string name="txtLike">兴趣爱好</string>
+    <string name="cbMusic">音乐</string>
+    <string name="cbSport">运动</string>
+    <string name="cbSwim">游泳</string>
+    <string name="cbRead">阅读</string>
+    <string name="btnSubmit">提交</string>
+    <string name="btnCancel">取消</string>
+
 </resources>
