@@ -12,10 +12,8 @@ import androidx.core.view.WindowInsetsCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 
@@ -33,10 +31,10 @@ public class MainActivity2 extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main2);
 
-        //EditText逻辑实现
+        //获取EditText控件，通过其ID引用它
         EditText etName=findViewById(R.id.etName);
 
-        //性别按钮群
+        //获取两个RadioButton控件，通过其ID引用它
         RadioButton rbMan=findViewById(R.id.btnMan);
         RadioButton rbWoman=findViewById(R.id.btnWoman);
 
@@ -57,23 +55,24 @@ public class MainActivity2 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;*/
 
-
+        //获取四个CheckBox控件，通过其ID引用它
         CheckBox cbmusic = findViewById(R.id.cb_music);
         CheckBox cbsport = findViewById(R.id.cb_swim);
         CheckBox cbSwim = findViewById(R.id.cb_swim);
         CheckBox cbRead = findViewById(R.id.cb_read);
 
 
-        Button submitButton=findViewById(R.id.btn_submit);
-        submitButton.setOnClickListener(new View.OnClickListener() {
+        //获取提交的Button控件，通过其ID引用它
+        Button btnSubmit=findViewById(R.id.btn_submit);
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(rbMan.isChecked()){
-                    selectedOption1="男";
+                    selectedOption1="男";//更新性别按钮显示为男
                 }
 
                 if(rbWoman.isChecked()){
-                    selectedOption1="女";
+                    selectedOption1="女";//更新性别按钮显示为女
                 }
 
                 if (cbSwim.isChecked()) {
@@ -92,9 +91,18 @@ public class MainActivity2 extends AppCompatActivity {
                     Option4="阅读";//更新点击阅读选项显示内容
                     //Toast.makeText(MainActivity2.this, "阅读已选择", Toast.LENGTH_SHORT).show();//测试
                 }
-
+                //弹出实验室考核作业要求的Toast
                 Toast.makeText(getApplicationContext(), "你好," + etName.getText() + "\n你的性别是："+selectedOption1+"\n你的个人爱好有："+Option1+","+Option2+","+Option3+","+Option4+"!", Toast.LENGTH_LONG).show();
+            }
+        });
 
+        //获取取消Button控件，通过其ID引用它
+        Button btnCancel=findViewById(R.id.btn_cancel);
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 结束当前活动并返回到前一个活动
+                finish();
             }
         });
 
