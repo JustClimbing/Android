@@ -18,6 +18,7 @@
         android:text="姓名："
         android:textSize="35dp"/>
     <EditText
+        android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:hint="姓名"

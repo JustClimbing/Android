@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -31,6 +32,9 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main2);
+
+        //EditText逻辑实现
+        EditText etName=findViewById(R.id.etName);
 
         //性别按钮群
         RadioButton rbMan=findViewById(R.id.btnMan);
@@ -89,7 +93,7 @@ public class MainActivity2 extends AppCompatActivity {
                     //Toast.makeText(MainActivity2.this, "阅读已选择", Toast.LENGTH_SHORT).show();//测试
                 }
 
-                Toast.makeText(getApplicationContext(), "你好," + selectedOption1 + "\n你的性别是："+selectedOption1+"\n你的个人爱好有："+Option1+","+Option2+","+Option3+","+Option4+"!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "你好," + etName.getText() + "\n你的性别是："+selectedOption1+"\n你的个人爱好有："+Option1+","+Option2+","+Option3+","+Option4+"!", Toast.LENGTH_LONG).show();
 
             }
         });
