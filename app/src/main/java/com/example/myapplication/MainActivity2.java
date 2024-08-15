@@ -33,8 +33,10 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         //性别按钮群
+        RadioButton rbMan=findViewById(R.id.btnMan);
+        RadioButton rbWoman=findViewById(R.id.btnWoman);
 
-        RadioGroup radgroup = (RadioGroup) findViewById(R.id.radioGroup);
+        /*RadioGroup radgroup = (RadioGroup) findViewById(R.id.radioGroup);
         //第一种获得单选按钮值的方法
         //为radioGroup设置一个监听器:setOnCheckedChanged()
         radgroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -42,9 +44,10 @@ public class MainActivity2 extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton radbtn = (RadioButton) findViewById(checkedId);
                 selectedOption1 = radbtn.getText().toString(); // 更新选中的选项
-                Toast.makeText(getApplicationContext(), "按钮组值发生改变,你选了" + radbtn.getText(), Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), "按钮组值发生改变,你选了" + radbtn.getText(), Toast.LENGTH_LONG).show();测试
             }
-        });
+
+        });*/
         /*ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -56,73 +59,38 @@ public class MainActivity2 extends AppCompatActivity {
         CheckBox cbSwim = findViewById(R.id.cb_swim);
         CheckBox cbRead = findViewById(R.id.cb_read);
 
-        cbmusic.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                /*if (isChecked) {
-                    // 处理“游泳”复选框被选中的逻辑
 
-                } else {
-                    // 处理“游泳”复选框取消选中的逻辑
-                }*/
-            }
-        });
-        cbsport.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                /*if (isChecked) {
-                    // 处理“游泳”复选框被选中的逻辑
-                } else {
-                    // 处理“游泳”复选框取消选中的逻辑
-                }*/
-            }
-        });
-
-        cbSwim.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                /*if (isChecked) {
-                    // 处理“游泳”复选框被选中的逻辑
-                } else {
-                    // 处理“游泳”复选框取消选中的逻辑
-                }*/
-            }
-        });
-
-        cbRead.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                /*if (isChecked) {
-                    // 处理“阅读”复选框被选中的逻辑
-                } else {
-                    // 处理“阅读”复选框取消选中的逻辑
-                }*/
-            }
-        });
         Button submitButton=findViewById(R.id.btn_submit);
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(rbMan.isChecked()){
+                    selectedOption1="男";
+                }
+
+                if(rbWoman.isChecked()){
+                    selectedOption1="女";
+                }
+
                 if (cbSwim.isChecked()) {
-                    Toast.makeText(MainActivity2.this, "游泳已选择", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(MainActivity2.this, "游泳未选择", Toast.LENGTH_SHORT).show();
+                    Option3="游泳";//更新点击游泳选项显示内容
+                    //Toast.makeText(MainActivity2.this, "游泳已选择", Toast.LENGTH_SHORT).show();//测试
                 }
                 if (cbmusic.isChecked()) {
-                    Toast.makeText(MainActivity2.this, "音乐已选择", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(MainActivity2.this, "音乐未选择", Toast.LENGTH_SHORT).show();
+                    Option1="音乐";//Option3="游泳";//更新点击游泳选项显示内容
+                    //Toast.makeText(MainActivity2.this, "音乐已选择", Toast.LENGTH_SHORT).show();//测试
                 }
                 if (cbsport.isChecked()) {
-                    Toast.makeText(MainActivity2.this, "运动已选择", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(MainActivity2.this, "运动未选择", Toast.LENGTH_SHORT).show();
+                    Option2="运动";//更新点击运动选项显示内容
+                    //Toast.makeText(MainActivity2.this, "运动已选择", Toast.LENGTH_SHORT).show();//测试
                 }
                 if (cbRead.isChecked()) {
-                    Toast.makeText(MainActivity2.this, "阅读已选择", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(MainActivity2.this, "阅读未选择", Toast.LENGTH_SHORT).show();
+                    Option4="阅读";//更新点击阅读选项显示内容
+                    //Toast.makeText(MainActivity2.this, "阅读已选择", Toast.LENGTH_SHORT).show();//测试
                 }
+
+                Toast.makeText(getApplicationContext(), "你好," + selectedOption1 + "\n你的性别是："+selectedOption1+"\n你的个人爱好有："+Option1+","+Option2+","+Option3+","+Option4+"!", Toast.LENGTH_LONG).show();
+
             }
         });
 
