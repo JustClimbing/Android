@@ -41,6 +41,7 @@ public class MainActivity2 extends AppCompatActivity {
         //获取提交的Button控件，通过其ID引用它
         Button btnSubmit=findViewById(R.id.btnSubmit);
         btnSubmit.setOnClickListener(new View.OnClickListener() {
+            boolean ischeck=false;
             @Override
             public void onClick(View v) {
                 if(rbMan.isChecked()){
@@ -50,16 +51,24 @@ public class MainActivity2 extends AppCompatActivity {
                     selectedOption1="女";//更新性别按钮显示为女
                 }
                 if (cbMusic.isChecked()) {
-                    Option1="音乐";//Option3="游泳";//更新点击游泳选项显示内容
+                    Option1="音乐";//更新点击音乐选项显示内容
+                }else{
+                    Option1="";
                 }
                 if (cbSport.isChecked()) {
                     Option2="运动";//更新点击运动选项显示内容
+                }else{
+                    Option2="";
                 }
                 if (cbSwim.isChecked()) {
                     Option3="游泳";//更新点击游泳选项显示内容
+                }else {
+                    Option3="";
                 }
                 if (cbRead.isChecked()) {
                     Option4="阅读";//更新点击阅读选项显示内容
+                }else{
+                    Option4="";
                 }
                 //弹出实验室考核作业要求的Toast
                 Toast.makeText(getApplicationContext(), "你好，" + etName.getText() + "\n你的性别是："+selectedOption1+"\n你的个人爱好有："+Option1+","+Option2+","+Option3+","+Option4+"!", Toast.LENGTH_LONG).show();
